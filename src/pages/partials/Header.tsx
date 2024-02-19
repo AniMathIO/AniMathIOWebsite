@@ -19,6 +19,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
                 <div className="flex gap-5 justify-between pl-20 max-md:flex-wrap max-md:pl-5 max-md:py-2.5">
                     <div className="flex gap-5 justify-between px-7 py-2.5 text-sm font-medium leading-5 dark:text-white max-md:px-5">
                         <Link to="https://github.com/MemerGamer/ManimStudio">Github</Link>
+                        <Link to="https://discord.gg/cZMTYSAHRX">Discord</Link>
                         {/* <Link to='/made-with-manim'>Made with ManimStudio</Link> */}
                     </div>
                     <button onClick={toggleDarkMode} className="md:w-20 w-14">
