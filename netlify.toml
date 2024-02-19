@@ -1,0 +1,9 @@
+[build]
+  # custom build command that install bun and run build
+  command = "./scripts/build.sh"
+  # vite output folder
+  publish = "dist"
+
+[build.environment]
+   # disable NPM install
+   NPM_FLAGS = "--version"
