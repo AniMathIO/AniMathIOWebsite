@@ -20,7 +20,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
                         {/* <Link to='/made-with-manim'>Made with ManimStudio</Link> */}
                     </div>
                     <button onClick={toggleDarkMode} className="md:w-20 w-14">
-                        <div className="flex flex-1 justify-center items-center px-8 py-2 rounded-xl bg-green-600 max-md:px-5">
+                        <div className="flex flex-1 justify-center items-center px-8 py-2 rounded-xl bg-cyan-600 max-md:px-5">
                             <img src={darkMode ? "./img/sun.png" : "./img/moon.png"} alt="theme icon" />
                         </div>
                     </button>

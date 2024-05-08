@@ -15,14 +15,16 @@ function App() {
   }, [darkMode]);
 
   return (
-    <Router>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Notfound />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className=''>
+      <Router>
+        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Notfound />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   )
 }
 
