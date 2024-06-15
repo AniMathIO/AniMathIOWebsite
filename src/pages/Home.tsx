@@ -63,7 +63,7 @@ const Home: React.FC = () => {
                                 </div>
                             }
 
-                            src={`./img/welcome.png`}
+                            src={`./img/welcome.jpg`}
                             badge={<img src="./img/AniMathIO.png" className="w-12 rotate-6" alt="AniMathIO badge" />}
                             showGradient={false}
                         />
