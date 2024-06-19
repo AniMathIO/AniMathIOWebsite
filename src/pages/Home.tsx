@@ -42,7 +42,7 @@ const Home: React.FC = () => {
         {
             imageUrl: "./img/macos.svg",
             altText: "Install on Mac icon",
-            platform: "Mac Os (Universal: Intel & Apple Silicon)",
+            platform: "Mac Os (Intel & Apple Silicon)",
             installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.2.0/AniMathIO-1.2.0-universal.dmg",
             // installLink: "/install/macos",
             isDisabled: false,
