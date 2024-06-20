@@ -70,8 +70,8 @@ const Home: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col justify-center items-center pt-2 mt-2">
-                    <h1 className="text-3xl dark:text-white font-bold">Example Demo:</h1>
+                <div className="flex flex-col justify-center items-center p-2 m-2">
+                    <h1 className="text-3xl dark:text-white font-bold mb-2 pb-2">Example Demo:</h1>
                     <ReactPlayer
                         url="./demo.webm"
                         loop={true}
