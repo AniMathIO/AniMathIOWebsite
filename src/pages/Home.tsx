@@ -70,8 +70,8 @@ const Home: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="flex justify-center items-center pt-2 mt-2">
-                    <h1>Example Demo:</h1>
+                <div className="flex flex-col justify-center items-center pt-2 mt-2">
+                    <h1 className="text-3xl dark:text-white font-bold">Example Demo:</h1>
                     <ReactPlayer
                         url="./demo.webm"
                         loop={true}
@@ -79,6 +79,7 @@ const Home: React.FC = () => {
                         height={"100%"}
                         controls={true}
                         muted={true}
+                        playing={true}
                     />
                 </div>
                 <div className="flex justify-center items-center px-16 py-11 text-base font-bold tracking-wide leading-6 text-center text-white whitespace-nowrap max-md:px-5 max-md:max-w-full">
