@@ -70,14 +70,15 @@ const Home: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center pt-2 mt-2">
+                    <h1>Example Demo:</h1>
                     <ReactPlayer
                         url="./demo.webm"
                         loop={true}
                         width={"100%"}
                         height={"100%"}
-                        playing={true}
                         controls={true}
+                        muted={true}
                     />
                 </div>
                 <div className="flex justify-center items-center px-16 py-11 text-base font-bold tracking-wide leading-6 text-center text-white whitespace-nowrap max-md:px-5 max-md:max-w-full">
