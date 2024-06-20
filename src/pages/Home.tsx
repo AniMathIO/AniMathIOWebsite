@@ -11,7 +11,7 @@ interface InstallButtonProps {
     isDisabled?: boolean;
     installLink: string;
 }
-import ReactPlayer from 'react-player/lazy';
+import ReactPlayer from 'react-player';
 
 const InstallButton: React.FC<InstallButtonProps> = ({ imageUrl, altText, platform, installLink, isDisabled }) => (
     <Button to={installLink} text={`Install on ${platform}`} imageUrl={imageUrl} altText={altText} disabled={isDisabled} />
@@ -70,8 +70,15 @@ const Home: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div>
-                    <ReactPlayer url="demo.mp4" loop={true} />
+                <div className="flex justify-center items-center">
+                    <ReactPlayer
+                        url="./demo.mp4"
+                        loop={true}
+                        width={"100%"}
+                        height={"100%"}
+                        playing={true}
+                        controls={true}
+                    />
                 </div>
                 <div className="flex justify-center items-center px-16 py-11 text-base font-bold tracking-wide leading-6 text-center text-white whitespace-nowrap max-md:px-5 max-md:max-w-full">
                     <div className="flex flex-col md:flex-row justify-between">
