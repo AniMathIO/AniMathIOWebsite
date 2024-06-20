@@ -72,7 +72,7 @@ const Home: React.FC = () => {
                 </div>
                 <div className="flex justify-center items-center">
                     <ReactPlayer
-                        url="./demo.mp4"
+                        url="./demo.webm"
                         loop={true}
                         width={"100%"}
                         height={"100%"}
