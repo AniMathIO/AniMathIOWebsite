@@ -17,7 +17,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
                     <div className="flex flex-col md:flex-row gap-2 md:gap-5 justify-between self-center px-7 py-2.5 text-sm font-medium leading-5 dark:text-white max-md:px-5">
                         <Link to="https://github.com/AniMathIO/AniMathIO">Github</Link>
                         <Link to="https://discord.gg/cZMTYSAHRX">Discord</Link>
-                        {/* <Link to='/made-with-manim'>Made with ManimStudio</Link> */}
+                        <Link to='/examples'>Examples ✨</Link>
                     </div>
                     <button onClick={toggleDarkMode} className="md:w-20 w-14">
                         <div className="flex flex-1 justify-center items-center px-8 py-2 rounded-xl bg-cyan-600 max-md:px-5">
