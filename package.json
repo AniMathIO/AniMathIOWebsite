@@ -10,30 +10,30 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tabler/icons-react": "^3.22.0",
+    "@tabler/icons-react": "^3.31.0",
+    "@tailwindcss/postcss": "^4.0.12",
+    "@tailwindcss/vite": "^4.0.12",
     "@types/react-modal": "^3.16.3",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.11.17",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-modal": "^3.16.1",
+    "framer-motion": "^12.4.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-modal": "^3.16.3",
     "react-player": "^2.16.0",
-    "react-router-dom": "^6.28.0",
-    "tailwind-merge": "^2.5.5"
+    "react-router-dom": "^7.3.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.12"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "@vitejs/plugin-react": "^4.3.3",
-    "autoprefixer": "latest",
-    "eslint": "^8.57.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "^5.7.2",
-    "vite": "^5.4.11"
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1"
   }
 }
