@@ -83,7 +83,7 @@ const Home: React.FC = () => {
                 <div className="flex flex-col justify-center items-center p-2 m-2">
                     <h1 className="text-3xl dark:text-white font-bold mb-2 pb-2">Example Demo:</h1>
                     <ReactPlayer
-                        url="./demo.webm"
+                        url="./videos/newtons-law.webm"
                         loop={true}
                         width={"100%"}
                         height={"100%"}
