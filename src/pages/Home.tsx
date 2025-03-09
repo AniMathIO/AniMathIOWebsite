@@ -10,12 +10,21 @@ interface InstallButtonProps {
     platform: string;
     isDisabled?: boolean;
     installLink: string;
+    legacy?: { version: string };
 }
 import ReactPlayer from 'react-player';
 
-const InstallButton: React.FC<InstallButtonProps> = ({ imageUrl, altText, platform, installLink, isDisabled }) => (
-    <Button to={installLink} text={`Install on ${platform}`} imageUrl={imageUrl} altText={altText} disabled={isDisabled} />
+const InstallButton: React.FC<InstallButtonProps> = ({ imageUrl, altText, platform, installLink, isDisabled, legacy }) => (
+    <Button
+        to={installLink}
+        text={`Install on ${platform}`}
+        imageUrl={imageUrl}
+        altText={altText}
+        disabled={isDisabled}
+        legacy={legacy}
+    />
 );
+
 
 const Home: React.FC = () => {
     const installButtons = [
@@ -23,30 +32,31 @@ const Home: React.FC = () => {
             imageUrl: "./img/windows.svg",
             altText: "Install on Windows icon",
             platform: "Windows",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.4.0/AniMathIO.Setup.1.4.0.exe",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.4.1/AniMathIO.Setup.1.4.1.exe",
             isDisabled: false,
         },
         {
             imageUrl: "./img/tux.svg",
             altText: "Install on Linux icon",
             platform: "Linux (AppImage)",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.4.0/AniMathIO-1.4.0.AppImage",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.4.1/AniMathIO-1.4.1.AppImage",
             isDisabled: false,
         },
         {
             imageUrl: "./img/tux.svg",
             altText: "Install on Linux icon",
             platform: "Linux (Snap)",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.4.0/animathio_1.4.0_amd64.snap",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.4.1/animathio_1.4.1_amd64.snap",
             isDisabled: false,
         },
         {
             imageUrl: "./img/macos.svg",
             altText: "Install on Mac icon",
-            platform: "Mac Os (Intel & Apple Silicon)",
+            platform: "Mac Os (Universal)",
             installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.3.0/AniMathIO-1.3.0-universal.dmg",
             // installLink: "/install/macos",
             isDisabled: false,
+            legacy: { version: "1.3.0" }
         },
     ];
 
@@ -88,14 +98,21 @@ const Home: React.FC = () => {
                         <Button to="https://github.com/AniMathIO/AniMathIO" text="Star on GitHub" imageUrl="./img/cli.svg" />
                     </div>
                 </div>
-                <div className="flex flex-col px-4 pt-2 pb-5 font-bold text-white max-md:max-w-full">
-                    <div className="self-center text-black dark:text-white text-4xl tracking-tighter max-md:max-w-full">Download for FREE!</div>
-                    <div className="flex flex-col md:flex-row justify-center items-center px-16 mt-9 pt-5 text-base tracking-wide leading-6 whitespace-nowrap max-md:px-5 max-md:max-w-full">
-                        {installButtons.map((button, index) => (
-                            <InstallButton key={index} imageUrl={button.imageUrl} altText={button.altText} platform={button.platform} installLink={button.installLink} isDisabled={button.isDisabled} />
-                        ))}
-                    </div>
+                <div className="flex flex-col md:flex-row justify-center items-center px-16 mt-9 pt-5 text-base tracking-wide leading-6 whitespace-nowrap max-md:px-5 max-md:max-w-full">
+                    {installButtons.map((button, index) => (
+                        <div key={index} className="relative flex items-center space-x-2">
+                            <InstallButton
+                                imageUrl={button.imageUrl}
+                                altText={button.altText}
+                                platform={button.platform}
+                                installLink={button.installLink}
+                                isDisabled={button.isDisabled}
+                                legacy={button.legacy}
+                            />
+                        </div>
+                    ))}
                 </div>
+
             </section>
         </div>
     );
