@@ -15,7 +15,7 @@ const Header = ({ darkMode, setDarkMode }: HeaderProps) => {
                 </Link>
                 <div className="flex gap-2 md:gap-5 justify-between">
                     <div className="flex flex-col md:flex-row gap-2 md:gap-5 justify-between self-center px-7 py-2.5 text-sm font-medium leading-5 dark:text-white max-md:px-5">
-                        <Link to="https://github.com/AniMathIO/AniMathIO">Github</Link>
+                        <Link to="https://github.com/AniMathIO">Github</Link>
                         <Link to="https://discord.gg/cZMTYSAHRX">Discord</Link>
                         <Link to='/examples'>Examples ✨</Link>
                     </div>
