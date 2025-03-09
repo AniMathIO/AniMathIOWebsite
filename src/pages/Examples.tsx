@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, ComponentType } from 'react';
 import ReactPlayer from 'react-player';
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
+
+const ModalSafeForReact = Modal as ComponentType<ReactModal['props']>;
 
 interface Video {
     title: string;
@@ -83,7 +85,7 @@ const Examples: React.FC = () => {
                 ))}
             </div>
 
-            <Modal
+            <ModalSafeForReact
                 isOpen={!!selectedVideo}
                 onRequestClose={closeModal}
                 contentLabel="Video Modal"
@@ -106,7 +108,7 @@ const Examples: React.FC = () => {
                         </button>
                     </div>
                 )}
-            </Modal>
+            </ModalSafeForReact>
             <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
         </div>
     );
