@@ -4,57 +4,135 @@ import Button
 import {
     MacbookScroll
 } from "../ui/macbook-scroll";
-interface InstallButtonProps {
+import ReactPlayer from 'react-player';
+
+interface DownloadCardProps {
     imageUrl: string;
     altText: string;
     platform: string;
-    isDisabled?: boolean;
     installLink: string;
+    isDisabled?: boolean;
     legacy?: { version: string };
+    format?: string;
 }
-import ReactPlayer from 'react-player';
 
-const InstallButton: React.FC<InstallButtonProps> = ({ imageUrl, altText, platform, installLink, isDisabled, legacy }) => (
-    <Button
-        to={installLink}
-        text={`Install on ${platform}`}
-        imageUrl={imageUrl}
-        altText={altText}
-        disabled={isDisabled}
-        legacy={legacy}
-    />
-);
+const DownloadCard: React.FC<DownloadCardProps> = ({
+    imageUrl,
+    altText,
+    platform,
+    installLink,
+    isDisabled,
+    legacy,
+    format
+}) => {
+    const isDownloadLink = installLink.match(/\.(exe|dmg|AppImage|snap|deb|flatpak|zip|tar|gz)$/i);
+
+    return (
+        <a
+            href={installLink}
+            download={isDownloadLink ? true : undefined}
+            className={`
+                group relative
+                flex flex-col items-center justify-center
+                p-6 md:p-8
+                bg-white dark:bg-gray-800
+                border border-gray-200 dark:border-gray-700
+                rounded-2xl
+                shadow-sm hover:shadow-lg
+                transition-all duration-300 ease-out
+                hover:border-cyan-500 dark:hover:border-cyan-400
+                hover:-translate-y-1
+                ${isDisabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : 'cursor-pointer'}
+                focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2
+                min-h-[180px] w-full
+            `}
+        >
+            <div className="flex flex-col items-center gap-4 w-full">
+                <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+                    <img
+                        src={imageUrl}
+                        alt={altText}
+                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
+                </div>
+
+                <div className="flex flex-col items-center gap-2 w-full">
+                    <span className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white text-center">
+                        {platform}
+                    </span>
+                    {format && (
+                        <span className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                            {format}
+                        </span>
+                    )}
+                </div>
+
+                {legacy && (
+                    <span className="absolute top-3 right-3 bg-red-500 text-white text-xs px-2.5 py-1 rounded-full font-medium">
+                        Legacy {legacy.version}
+                    </span>
+                )}
+
+                <div className="mt-2 flex items-center gap-2 text-cyan-600 dark:text-cyan-400 transition-all duration-300 group-hover:text-cyan-700 dark:group-hover:text-cyan-300">
+                    <span className="text-sm font-medium">Download</span>
+                    <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                </div>
+            </div>
+        </a>
+    );
+};
 
 
 const Home: React.FC = () => {
-    const installButtons = [
+    const downloads = [
         {
             imageUrl: "./img/windows.svg",
-            altText: "Install on Windows icon",
+            altText: "Windows icon",
             platform: "Windows",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.5.0/AniMathIO.Setup.1.5.0.exe",
+            format: ".exe",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/AniMathIO.Setup.1.6.2.exe",
             isDisabled: false,
         },
         {
             imageUrl: "./img/tux.svg",
-            altText: "Install on Linux icon",
-            platform: "Linux (AppImage)",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.5.0/AniMathIO-1.5.0.AppImage",
+            altText: "Linux icon",
+            platform: "Linux",
+            format: "AppImage",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/AniMathIO-1.6.2.AppImage",
             isDisabled: false,
         },
         {
             imageUrl: "./img/tux.svg",
-            altText: "Install on Linux icon",
-            platform: "Linux (Snap)",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.5.0/animathio_1.5.0_amd64.snap",
+            altText: "Linux icon",
+            platform: "Linux",
+            format: "Flatpak",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/AniMathIO-1.6.2.flatpak",
+            isDisabled: false,
+        },
+        {
+            imageUrl: "./img/tux.svg",
+            altText: "Linux icon",
+            platform: "Linux",
+            format: "Snap",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/animathio_1.6.2_amd64.snap",
+            isDisabled: false,
+        },
+        {
+            imageUrl: "./img/tux.svg",
+            altText: "Linux icon",
+            platform: "Linux",
+            format: "deb",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/animathio_1.6.2_amd64.deb",
             isDisabled: false,
         },
         {
             imageUrl: "./img/macos.svg",
-            altText: "Install on Mac icon",
-            platform: "Mac Os (Universal)",
+            altText: "macOS icon",
+            platform: "macOS",
+            format: ".dmg",
             installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/v1.3.0/AniMathIO-1.3.0-universal.dmg",
-            // installLink: "/install/macos",
             isDisabled: false,
             legacy: { version: "1.3.0" }
         },
@@ -92,25 +170,36 @@ const Home: React.FC = () => {
                         playing={true}
                     />
                 </div>
-                <div className="flex justify-center items-center px-16 py-11 text-base font-bold tracking-wide leading-6 text-center text-white whitespace-nowrap max-md:px-5 max-md:max-w-full">
-                    <div className="flex flex-col md:flex-row justify-between">
-                        <Button to="https://github.com/AniMathIO" text="Follow us on Github" imageUrl="./img/github.svg" />
-                        <Button to="https://github.com/AniMathIO/AniMathIO#AniMathIO" text="Getting started" imageUrl="./img/cli.svg" />
+                <div className="flex justify-center items-center px-4 md:px-16 py-11 text-base font-bold tracking-wide leading-6 text-center text-white whitespace-nowrap max-md:px-5 max-md:max-w-full">
+                    <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-2xl">
+                        <Button to="https://github.com/AniMathIO" text="Follow us on Github" imageUrl="./img/github.svg" isExternal={true} />
+                        <Button to="https://github.com/AniMathIO/AniMathIO#AniMathIO" text="Getting started" imageUrl="./img/cli.svg" isExternal={true} />
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row justify-center items-center px-16 mt-9 pt-5 text-base tracking-wide leading-6 whitespace-nowrap max-md:px-5 max-md:max-w-full">
-                    {installButtons.map((button, index) => (
-                        <div key={index} className="relative flex items-center space-x-2">
-                            <InstallButton
-                                imageUrl={button.imageUrl}
-                                altText={button.altText}
-                                platform={button.platform}
-                                installLink={button.installLink}
-                                isDisabled={button.isDisabled}
-                                legacy={button.legacy}
+                <div className="flex flex-col justify-center items-center px-4 md:px-16 mt-12 pt-5 max-w-7xl mx-auto">
+                    <div className="text-center mb-10">
+                        <h2 className="text-3xl md:text-4xl dark:text-white font-bold mb-3">
+                            Download AniMathIO
+                        </h2>
+                        <p className="text-gray-600 dark:text-gray-400 text-lg">
+                            Choose your platform to get started
+                        </p>
+                    </div>
+
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                        {downloads.map((download, index) => (
+                            <DownloadCard
+                                key={index}
+                                imageUrl={download.imageUrl}
+                                altText={download.altText}
+                                platform={download.platform}
+                                format={download.format}
+                                installLink={download.installLink}
+                                isDisabled={download.isDisabled}
+                                legacy={download.legacy}
                             />
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
             </section>
