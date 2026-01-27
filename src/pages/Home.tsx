@@ -92,7 +92,7 @@ const Home: React.FC = () => {
             altText: "Windows icon",
             platform: "Windows",
             format: ".exe",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/AniMathIO.Setup.1.6.2.exe",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.3/AniMathIO.Setup.1.6.3.exe",
             isDisabled: false,
         },
         {
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
             altText: "Linux icon",
             platform: "Linux",
             format: "AppImage",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/AniMathIO-1.6.2.AppImage",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.3/AniMathIO-1.6.3.AppImage",
             isDisabled: false,
         },
         {
@@ -108,7 +108,7 @@ const Home: React.FC = () => {
             altText: "Linux icon",
             platform: "Linux",
             format: "Flatpak",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/AniMathIO-1.6.2.flatpak",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.3/AniMathIO-1.6.3.flatpak",
             isDisabled: false,
         },
         {
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
             altText: "Linux icon",
             platform: "Linux",
             format: "Snap",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/animathio_1.6.2_amd64.snap",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.3/animathio_1.6.3_amd64.snap",
             isDisabled: false,
         },
         {
@@ -124,7 +124,7 @@ const Home: React.FC = () => {
             altText: "Linux icon",
             platform: "Linux",
             format: "deb",
-            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.2/animathio_1.6.2_amd64.deb",
+            installLink: "https://github.com/AniMathIO/AniMathIO/releases/download/animathio-v1.6.3/animathio_1.6.3_amd64.deb",
             isDisabled: false,
         },
         {
