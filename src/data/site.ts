@@ -219,7 +219,8 @@ export interface Showcase {
   title: string
   summary: string
   poster: string
-  music: string
+  /** The `credit` line from examples/showcase/<name>/music.toml in the main repository. */
+  credit: string
   /**
    * Set to true once the exported MP4s from `scripts/showcase-export.sh` are copied to
    * `public/videos/showcase/`. Until then the card shows a still frame.
@@ -237,24 +238,24 @@ export const showcaseVideos: Showcase[] = [
     title: 'The Pythagorean theorem',
     summary: 'Four congruent 3-4-5 triangles rearrange, leaving equal square areas.',
     poster: '/img/showcase/pythagorean.webp',
-    music: 'Bach, Prelude in C major BWV 846. Kimiko Ishizaka, CC0',
-    published: false,
+    credit: 'Bach / Kimiko Ishizaka / CC0',
+    published: true,
   },
   {
     slug: 'unit-circle',
     title: 'A circle becomes a wave',
     summary: "A rotating point's vertical projection traces two sine periods.",
     poster: '/img/showcase/unit-circle.webp',
-    music: 'Satie, Gymnopédie No. 1. Robin Alciatore / Musopen, public domain',
-    published: false,
+    credit: 'Satie / Robin Alciatore / Musopen / Public domain',
+    published: true,
   },
   {
     slug: 'fourier',
     title: 'Build a square wave',
     summary: 'One, two, then four odd harmonics sum through rotating epicycles.',
     poster: '/img/showcase/fourier.webp',
-    music: 'Debussy, Clair de lune. USAF Wright Brass, public domain in the US',
-    published: false,
+    credit: 'Debussy / USAF Wright Brass / Public domain (US)',
+    published: true,
   },
 ]
 

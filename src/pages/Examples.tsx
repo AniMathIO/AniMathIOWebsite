@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { Download, Film } from 'lucide-react'
 import { Container, Eyebrow } from '../components/ui'
+import { AspectToggle, MusicCredit, ShowcaseMedia, type Aspect } from '../components/showcase'
 import { showcaseFile, showcaseVideos, type Showcase } from '../data/site'
-
-type Aspect = '16x9' | '9x16'
 
 const ShowcaseCard = ({ video }: { video: Showcase }) => {
   const [aspect, setAspect] = useState<Aspect>('16x9')
@@ -12,49 +11,14 @@ const ShowcaseCard = ({ video }: { video: Showcase }) => {
 
   return (
     <article className="panel overflow-hidden">
-      <div className="flex items-center justify-center bg-[#090b10] p-3">
-        {video.published ? (
-          <video
-            key={file}
-            controls
-            preload="none"
-            poster={video.poster}
-            className={aspect === '16x9' ? 'aspect-video w-full' : 'aspect-[9/16] max-h-[28rem]'}
-          >
-            <source src={file} type="video/mp4" />
-          </video>
-        ) : (
-          <img
-            src={video.poster}
-            alt={`Still frame from the ${video.title} explainer`}
-            width={640}
-            height={360}
-            loading="lazy"
-            className="aspect-video w-full object-cover"
-          />
-        )}
-      </div>
+      <ShowcaseMedia video={video} aspect={aspect} />
       <div className="p-5">
         <h2 className="text-lg font-semibold text-fg">{video.title}</h2>
         <p className="mt-1 text-sm text-fg-2">{video.summary}</p>
-        <p className="mt-3 text-xs text-fg-3">Music: {video.music}</p>
+        <MusicCredit video={video} />
 
         <div className="mt-4 flex items-center justify-between gap-3">
-          <div role="group" aria-label="Aspect ratio" className="inline-flex rounded-[8px] border border-line bg-raised p-0.5">
-            {(['16x9', '9x16'] as const).map((a) => (
-              <button
-                key={a}
-                type="button"
-                aria-pressed={aspect === a}
-                onClick={() => setAspect(a)}
-                className={`rounded-[6px] px-3 py-1 font-mono text-xs transition-colors ${
-                  aspect === a ? 'bg-hover text-fg' : 'text-fg-2 hover:text-fg'
-                }`}
-              >
-                {a.replace('x', ':')}
-              </button>
-            ))}
-          </div>
+          <AspectToggle value={aspect} onChange={setAspect} />
           {video.published ? (
             <a
               href={file}

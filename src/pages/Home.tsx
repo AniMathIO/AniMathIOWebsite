@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ArrowRight, BookOpen, Download as DownloadIcon, Gauge, Play, Wand2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import {
@@ -7,6 +8,7 @@ import {
   SectionHeading,
   Shot,
 } from '../components/ui'
+import { AspectToggle, MusicCredit, ShowcaseMedia, type Aspect } from '../components/showcase'
 import {
   DOCS_V1,
   DOCS_V2,
@@ -21,6 +23,7 @@ import {
   pillars,
   plugins,
   showcaseVideos,
+  type Showcase as ShowcaseVideo,
 } from '../data/site'
 
 const Hero = () => (
@@ -275,6 +278,23 @@ const Keymap = () => (
   </section>
 )
 
+const HomeShowcaseCard = ({ video }: { video: ShowcaseVideo }) => {
+  const [aspect, setAspect] = useState<Aspect>('16x9')
+  return (
+    <article className="panel overflow-hidden">
+      <ShowcaseMedia video={video} aspect={aspect} />
+      <div className="p-5">
+        <h3 className="font-semibold text-fg">{video.title}</h3>
+        <p className="mt-1 text-sm text-fg-2">{video.summary}</p>
+        <MusicCredit video={video} />
+        <div className="mt-4">
+          <AspectToggle value={aspect} onChange={setAspect} />
+        </div>
+      </div>
+    </article>
+  )
+}
+
 const Showcase = () => (
   <section id="showcase" className="pt-24">
     <Container>
@@ -283,20 +303,7 @@ const Showcase = () => (
       </SectionHeading>
       <div className="grid gap-4 md:grid-cols-3">
         {showcaseVideos.map((v) => (
-          <article key={v.slug} className="panel overflow-hidden">
-            <img
-              src={v.poster}
-              alt={`Still frame from the ${v.title} explainer`}
-              width={640}
-              height={360}
-              loading="lazy"
-              className="block aspect-video w-full object-cover"
-            />
-            <div className="p-5">
-              <h3 className="font-semibold text-fg">{v.title}</h3>
-              <p className="mt-1 text-sm text-fg-2">{v.summary}</p>
-            </div>
-          </article>
+          <HomeShowcaseCard key={v.slug} video={v} />
         ))}
       </div>
       <Link
