@@ -23,8 +23,8 @@ export const VERSION = '2.0.0'
 export const REPO = 'https://github.com/AniMathIO/AniMathIO'
 export const RELEASES = `${REPO}/releases`
 export const DOCS = 'https://docs.animathio.com'
-export const DOCS_V2 = `${DOCS}/docs/v2/getting-started`
-export const DOCS_V1 = `${DOCS}/docs/getting-started`
+export const DOCS_V2 = `${DOCS}/docs/getting-started`
+export const DOCS_V1 = `${DOCS}/docs/v1/getting-started`
 export const DISCORD = 'https://discord.gg/cZMTYSAHRX'
 
 /** Release assets are published under the tag `v2.0.0` (release-plz, `v{{version}}`). */
@@ -143,6 +143,8 @@ export interface PluginInfo {
 }
 
 export const plugins: PluginInfo[] = [
+  { id: 'org.animathio.latex', summary: 'LaTeX and Typst math with a Write on reveal' },
+  { id: 'org.animathio.graph', summary: 'Function plots and coordinate grids' },
   { id: 'org.animathio.text', summary: 'Text, titles and caption styles' },
   { id: 'org.animathio.shapes', summary: 'Vector shapes' },
   { id: 'org.animathio.effects-basic', summary: 'Eight clip effects' },
@@ -279,12 +281,12 @@ export const benchmarks: Benchmark[] = [
   { metric: 'Start to a usable window', v1: '0.81 s', v2: '0.20 s' },
   { metric: 'Memory, idle with a project open', v1: '923 MiB', v2: '487 MiB' },
   {
-    metric: 'Peak memory while exporting',
+    metric: 'Peak memory, 10 s export',
     v1: '1252 MiB',
     v2: '128 MiB',
     note: '1.x exports from its window, 2.0 from animathio-cli',
   },
-  { metric: 'Installed size', v1: '658 MiB', v2: '293 MiB' },
+  { metric: 'Size on disk', v1: '658 MiB', v2: '293 MiB', note: 'unpacked 1.x build vs. 2.0 install' },
 ]
 
 export const BENCHMARKS_URL = 'https://github.com/AniMathIO/AniMathIO/blob/main/docs/benchmarks.md'
