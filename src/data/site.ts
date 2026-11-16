@@ -19,7 +19,7 @@ import {
   Laptop,
 } from 'lucide-react'
 
-export const VERSION = '2.0.1'
+export const VERSION = '2.1.0'
 export const REPO = 'https://github.com/AniMathIO/AniMathIO'
 export const RELEASES = `${REPO}/releases`
 export const DOCS = 'https://docs.animathio.com'
