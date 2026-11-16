@@ -1,7 +1,7 @@
 # AniMathIO website
 
-Marketing site for [AniMathIO](https://github.com/AniMathIO/AniMathIO) 2.0 (Vite, React, Tailwind CSS 4).
-The look follows the 2.0 editor: tokens in `src/index.css` mirror `docs/design.md` in the main repository,
+Marketing site for [AniMathIO](https://github.com/AniMathIO/AniMathIO) 2 (Vite, React, Tailwind CSS 4).
+The look follows the AniMathIO 2 editor: tokens in `src/index.css` mirror `docs/design.md` in the main repository,
 icons are [Lucide](https://lucide.dev), type is Inter and JetBrains Mono.
 
 ```bash

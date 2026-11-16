@@ -36,7 +36,7 @@ const ShowcaseCard = ({ video }: { video: Showcase }) => {
         {!video.published && (
           <p className="mt-3 flex items-center gap-2 text-xs text-fg-3">
             <Film size={14} aria-hidden="true" />
-            Still frame from the test renders. The exported MP4 is added with the 2.0 release.
+            Still frame from the test renders. The exported MP4 is not available here yet.
           </p>
         )}
       </div>
@@ -72,7 +72,7 @@ const Examples: React.FC = () => (
   <Container className="pt-16">
     <header className="max-w-2xl">
       <Eyebrow>Showcase</Eyebrow>
-      <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">Made with AniMathIO 2.0</h1>
+      <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">Made with AniMathIO 2</h1>
       <p className="mt-4 text-lg text-fg-2">
         Three 24-second explainers, built entirely through the public CLI and MCP server and exported at 1920×1080
         (16:9) and 1080×1920 (9:16). The sources live in{' '}
@@ -96,7 +96,7 @@ const Examples: React.FC = () => (
       <Eyebrow>Made with 1.x</Eyebrow>
       <h2 className="mt-3 text-2xl font-semibold tracking-tight">Earlier demos</h2>
       <p className="mt-2 max-w-2xl text-fg-2">
-        These were made in AniMathIO 1.x. The project files open with the 1.x editor, and import into 2.0 with{' '}
+        These were made in AniMathIO 1.x. The project files open with the 1.x editor, and import into AniMathIO 2 with{' '}
         <code className="font-mono text-fg">animathio-cli import-v1</code>.
       </p>
       <div className="mt-6 grid gap-4 md:grid-cols-2">

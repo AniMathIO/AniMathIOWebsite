@@ -25,7 +25,7 @@ const Footer: React.FC = () => (
       </div>
       <div className={col}>
         <span className={head}>Docs</span>
-        <a className={link} href={DOCS_V2}>AniMathIO 2.0</a>
+        <a className={link} href={DOCS_V2}>AniMathIO 2</a>
         <a className={link} href={DOCS_V1}>1.x (legacy)</a>
         <a className={link} href={`${DOCS}/blog`}>Blog</a>
       </div>
