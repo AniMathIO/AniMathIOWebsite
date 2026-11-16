@@ -19,7 +19,7 @@ import {
   Laptop,
 } from 'lucide-react'
 
-export const VERSION = '2.0.0'
+export const VERSION = '2.0.1'
 export const REPO = 'https://github.com/AniMathIO/AniMathIO'
 export const RELEASES = `${REPO}/releases`
 export const DOCS = 'https://docs.animathio.com'
@@ -27,7 +27,7 @@ export const DOCS_V2 = `${DOCS}/docs/getting-started`
 export const DOCS_V1 = `${DOCS}/docs/v1/getting-started`
 export const DISCORD = 'https://discord.gg/cZMTYSAHRX'
 
-/** Release assets are published under the tag `v2.0.0` (release-plz, `v{{version}}`). */
+/** Release assets are published under the tag `v{VERSION}` (release-plz, `v{{version}}`). */
 const asset = (name: string) => `${REPO}/releases/download/v${VERSION}/${name}`
 
 export interface Download {
