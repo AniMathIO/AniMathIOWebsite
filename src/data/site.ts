@@ -263,8 +263,8 @@ export const showcaseFile = (slug: string, aspect: '16x9' | '9x16') =>
   `/videos/showcase/${slug}-${aspect}.mp4`
 
 /**
- * TODO(benchmarks): fill this in from `docs/benchmarks.md` in the main repository once it
- * lands. The Benchmarks section is only rendered in production when this list is not empty.
+ * From `docs/benchmarks.md` in the main repository (1.8.3 vs 2.0.0, one Linux machine under
+ * Xvfb, medians of three runs). The Benchmarks section is hidden in production when empty.
  */
 export interface Benchmark {
   metric: string
@@ -272,4 +272,19 @@ export interface Benchmark {
   v2: string
   note?: string
 }
-export const benchmarks: Benchmark[] = []
+export const benchmarks: Benchmark[] = [
+  { metric: 'Export, 60 s 1080p30 MP4', v1: '116.8 s', v2: '37.4 s', note: '3.1x faster' },
+  { metric: 'Export, 10 s 1080p30 MP4', v1: '20.4 s', v2: '6.5 s' },
+  { metric: 'Open a project', v1: '1.08 s', v2: '0.21 s' },
+  { metric: 'Start to a usable window', v1: '0.81 s', v2: '0.20 s' },
+  { metric: 'Memory, idle with a project open', v1: '923 MiB', v2: '487 MiB' },
+  {
+    metric: 'Peak memory while exporting',
+    v1: '1252 MiB',
+    v2: '128 MiB',
+    note: '1.x exports from its window, 2.0 from animathio-cli',
+  },
+  { metric: 'Installed size', v1: '658 MiB', v2: '293 MiB' },
+]
+
+export const BENCHMARKS_URL = 'https://github.com/AniMathIO/AniMathIO/blob/main/docs/benchmarks.md'

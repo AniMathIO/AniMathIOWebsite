@@ -16,6 +16,7 @@ import {
   VERSION,
   automation,
   benchmarks,
+  BENCHMARKS_URL,
   cliExample,
   downloads,
   keymap,
@@ -316,18 +317,18 @@ const Showcase = () => (
   </section>
 )
 
-/**
- * TODO(benchmarks): numbers come from `docs/benchmarks.md` in the main repository. Fill
- * `benchmarks` in `src/data/site.ts`. Production hides this section while the list is empty;
- * the dev server shows the marked placeholder.
- */
+/** Numbers from `docs/benchmarks.md` in the main repository (`benchmarks` in `src/data/site.ts`). */
 const Benchmarks = () => {
   if (benchmarks.length === 0 && !import.meta.env.DEV) return null
   return (
     <section id="benchmarks" className="pt-24">
       <Container>
         <SectionHeading eyebrow="Benchmarks" title="Measured, not promised">
-          Preview and export speed against 1.x, with the machine and method published next to the numbers.
+          2.0 against 1.8.3 on one Linux machine (Ryzen 7 5800X, Xvfb), medians of three runs.{' '}
+          <a className="text-accent underline-offset-4 hover:underline" href={BENCHMARKS_URL}>
+            Method and caveats
+          </a>
+          .
         </SectionHeading>
         {benchmarks.length === 0 ? (
           <div
