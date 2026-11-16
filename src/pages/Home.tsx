@@ -45,7 +45,7 @@ const Hero = () => (
           <span className="text-gradient">for math animation.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-fg-2">
-          AniMathIO 2.0 is a from-scratch Rust rewrite: a small, fast timeline editor with LaTeX, graphs and shapes
+          AniMathIO 2 is a from-scratch Rust rewrite: a small, fast timeline editor with LaTeX, graphs and shapes
           as sandboxed plugins, and CapCut-style automation that runs on your machine.
         </p>
         <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
@@ -74,7 +74,7 @@ const Hero = () => (
         />
         <Shot
           src="/img/editor/editor-main.webp"
-          alt="The AniMathIO 2.0 editor: media library, program preview, inspector and a four-track timeline"
+          alt="The AniMathIO 2 editor: media library, program preview, inspector and a four-track timeline"
           width={1400}
           height={900}
           priority
@@ -87,7 +87,7 @@ const Hero = () => (
 const Pillars = () => (
   <section id="features" className="pt-24">
     <Container>
-      <SectionHeading eyebrow="What 2.0 is" title="A small editor core, and everything else as plugins">
+      <SectionHeading eyebrow="What AniMathIO 2 is" title="A small editor core, and everything else as plugins">
         The core is a simple video editor: clips, a multi-track timeline, transforms and keyframes, audio, preview
         and export. Nothing math-specific lives in it.
       </SectionHeading>

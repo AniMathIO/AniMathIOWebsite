@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { BookOpen, Code, Menu, MessageCircle, X } from 'lucide-react'
-import { DISCORD, DOCS, DOCS_V2, REPO } from '../../data/site'
+import { DISCORD, DOCS, DOCS_V2, REPO, VERSION } from '../../data/site'
 
 const linkClass =
   'rounded-[6px] px-3 py-2 text-sm font-medium text-fg-2 transition-colors hover:bg-hover hover:text-fg'
@@ -34,7 +34,7 @@ const Header = () => {
           <img src="/img/logo.webp" width={36} height={36} alt="" className="rounded-[8px]" />
           <span className="text-base font-semibold tracking-tight">AniMathIO</span>
           <span className="rounded-full border border-line bg-raised px-2 py-0.5 font-mono text-[11px] text-fg-2">
-            2.0
+            {VERSION}
           </span>
         </Link>
 

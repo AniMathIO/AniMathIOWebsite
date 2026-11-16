@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Design tokens mirror the AniMathIO 2.0 editor (docs/design.md and
+ * Design tokens mirror the AniMathIO 2 editor (docs/design.md and
  * apps/animathio/src/style.rs in the main repository): calm dark surfaces,
  * one violet-to-cyan accent, Inter for text and JetBrains Mono for numbers.
  */
