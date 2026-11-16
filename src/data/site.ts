@@ -19,7 +19,7 @@ import {
   Laptop,
 } from 'lucide-react'
 
-export const VERSION = '2.1.0'
+export const VERSION = '2.2.0'
 export const REPO = 'https://github.com/AniMathIO/AniMathIO'
 export const RELEASES = `${REPO}/releases`
 export const DOCS = 'https://docs.animathio.com'
@@ -167,7 +167,7 @@ export const pillars: Feature[] = [
   {
     icon: Sigma,
     title: 'Math objects',
-    body: 'Eleven editable objects with a live-preview dialog: LaTeX with a Write on reveal, plots, vectors, polygons, grids and more.',
+    body: 'Eleven editable objects with a live-preview dialog: LaTeX with inline colours and a Write on reveal, plots, vectors, polygons, grids and more.',
   },
   {
     icon: Bot,
