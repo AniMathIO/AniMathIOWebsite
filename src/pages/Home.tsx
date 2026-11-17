@@ -195,6 +195,15 @@ const Plugins = () => (
             Plugins run in wasmtime through the Component Model, against WIT interfaces with memory, fuel and time
             limits. The first-party set ships in every installer. Write your own with the authoring guide.
           </p>
+          <p className="mt-4 text-lg text-fg-2">
+            Community plugins extend the editor with third-party tools such as Code Snippets for animated,
+            syntax-highlighted code. They are off by default; each installed plugin starts disabled until you
+            enable it. Install from a file or a verified HTTPS download, then enable or remove plugins without
+            restarting. Explore the{' '}
+            <a className="text-accent hover:underline" href="https://github.com/AniMathIO/plugins">community registry</a>
+            {' '}and follow the{' '}
+            <a className="text-accent hover:underline" href="https://docs.animathio.com/docs/community-plugins">community plugins guide</a>.
+          </p>
           <a
             href={`${DOCS_V2.replace('getting-started', 'plugins')}`}
             className="mt-6 inline-flex items-center gap-2 font-medium text-accent hover:underline"
