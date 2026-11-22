@@ -74,9 +74,9 @@ const Hero = () => (
         />
         <Shot
           src="/img/editor/editor-main.webp"
-          alt="The AniMathIO 2 editor: media library, program preview, inspector and a four-track timeline"
+          alt="The AniMathIO 2 editor: media library, program preview, inspector and a multi-track timeline"
           width={1400}
-          height={900}
+          height={788}
           priority
         />
       </div>
@@ -131,9 +131,9 @@ const MathObjects = () => (
         </div>
         <Shot
           src="/img/editor/editor-math-panel.webp"
-          alt="A sine plot selected on the canvas, with the Math library open on the left and plot settings in the inspector"
+          alt="A sine plot selected on the canvas, with its plot settings in the flat inspector"
           width={1920}
-          height={1067}
+          height={1080}
         />
       </div>
     </Container>
@@ -177,7 +177,7 @@ const Automation = () => (
           src="/img/editor/editor-autocut.webp"
           alt="The Automatic cuts panel listing detected silences with the time saved"
           width={1400}
-          height={900}
+          height={788}
         />
       </div>
     </Container>
@@ -233,7 +233,7 @@ const Control = () => (
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Script it, or hand it to an agent</h2>
           <p className="mt-4 text-lg text-fg-2">
             Every mutation is a serializable, invertible command, so the editor, the command line and MCP clients all
-            edit the project the same way, with undo included. Render frames, export MP4s and run the automation steps
+            edit the project the same way, with undo included. Render frames, export MP4 or WebM and run the automation steps
             headlessly.
           </p>
           <a
@@ -280,9 +280,9 @@ const Keymap = () => (
       <Shot
         className="mt-8"
         src="/img/editor/editor-timeline.webp"
-        alt="The timeline with tool buttons, track headers, filmstrip clips and snapping"
+        alt="The timeline with tool buttons, track headers, clips and markers"
         width={1920}
-        height={511}
+        height={305}
       />
     </Container>
   </section>

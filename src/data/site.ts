@@ -17,9 +17,10 @@ import {
   Package,
   Monitor,
   Laptop,
+  Mic,
 } from 'lucide-react'
 
-export const VERSION = '2.2.0'
+export const VERSION = '2.3.0'
 export const REPO = 'https://github.com/AniMathIO/AniMathIO'
 export const RELEASES = `${REPO}/releases`
 export const DOCS = 'https://docs.animathio.com'
@@ -121,6 +122,11 @@ export const automation: Feature[] = [
     title: 'Denoise',
     body: 'Spectral gating that learns the noise profile from a selected range or the quietest frames. Deterministic and undoable.',
   },
+  {
+    icon: Mic,
+    title: 'Record audio',
+    body: 'Record a voice-over from any input device straight into the Media library, with a live level meter, and optionally drop it on the timeline at the playhead.',
+  },
 ]
 
 export const mathObjects = [
@@ -167,7 +173,7 @@ export const pillars: Feature[] = [
   {
     icon: Sigma,
     title: 'Math objects',
-    body: 'Eleven editable objects with a live-preview dialog: LaTeX with inline colours and a Write on reveal, plots, vectors, polygons, grids and more.',
+    body: 'Eleven editable objects with a live-preview dialog: LaTeX with inline colours, a Write on reveal and optional describe-it-in-words authoring with your own or a local model, plus plots, vectors, polygons, grids and more.',
   },
   {
     icon: Bot,
