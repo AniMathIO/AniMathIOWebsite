@@ -6,7 +6,7 @@ export const Container = ({ children, className = '' }: { children: ReactNode; c
 )
 
 export const Eyebrow = ({ children }: { children: ReactNode }) => (
-  <p className="font-mono text-xs font-medium uppercase tracking-[0.14em] text-accent">{children}</p>
+  <p className="text-sm font-medium text-fg-2">{children}</p>
 )
 
 export const SectionHeading = ({
@@ -26,7 +26,7 @@ export const SectionHeading = ({
 )
 
 export const IconBadge = ({ icon: Icon }: { icon: LucideIcon }) => (
-  <span className="inline-flex h-10 w-10 items-center justify-center rounded-[8px] border border-line bg-raised text-accent">
+  <span className="inline-flex h-10 w-10 items-center justify-center rounded-card border border-line bg-raised text-accent">
     <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
   </span>
 )
@@ -47,7 +47,7 @@ export const Shot = ({
   priority?: boolean
   className?: string
 }) => (
-  <figure className={`panel overflow-hidden shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] ${className}`}>
+  <figure className={`panel overflow-hidden ${className}`}>
     <img
       src={src}
       alt={alt}

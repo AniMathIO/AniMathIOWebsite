@@ -4,7 +4,7 @@ import { BookOpen, Code, Menu, MessageCircle, X } from 'lucide-react'
 import { DISCORD, DOCS, DOCS_V2, REPO, VERSION } from '../../data/site'
 
 const linkClass =
-  'rounded-[6px] px-3 py-2 text-sm font-medium text-fg-2 transition-colors hover:bg-hover hover:text-fg'
+  'rounded-control px-3 py-2 text-sm font-medium text-fg-2 transition-colors hover:bg-hover hover:text-fg aria-[current=page]:bg-accent/16 aria-[current=page]:text-fg'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -31,9 +31,9 @@ const Header = () => {
     <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-3" onClick={close}>
-          <img src="/img/logo.webp" width={36} height={36} alt="" className="rounded-[8px]" />
+          <img src="/img/logo.webp" width={36} height={36} alt="" className="rounded-card" />
           <span className="text-base font-semibold tracking-tight">AniMathIO</span>
-          <span className="rounded-full border border-line bg-raised px-2 py-0.5 font-mono text-[11px] text-fg-2">
+          <span className="rounded-full border border-line bg-raised px-2 py-0.5 text-[11px] font-medium tabular-nums text-fg-2">
             {VERSION}
           </span>
         </Link>
@@ -51,7 +51,7 @@ const Header = () => {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-[6px] text-fg-2 hover:bg-hover hover:text-fg md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-control text-fg-2 hover:bg-hover hover:text-fg md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? 'Close menu' : 'Open menu'}

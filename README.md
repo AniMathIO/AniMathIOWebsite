@@ -1,8 +1,10 @@
 # AniMathIO website
 
 Marketing site for [AniMathIO](https://github.com/AniMathIO/AniMathIO) 2 (Vite, React, Tailwind CSS 4).
-The look follows the AniMathIO 2 editor: tokens in `src/index.css` mirror `docs/design.md` in the main repository,
-icons are [Lucide](https://lucide.dev), type is Inter and JetBrains Mono.
+The look follows the AniMathIO 2.3 editor: tokens in `src/index.css` mirror `docs/design.md` and
+`apps/animathio/src/style/tokens.rs` in the main repository (neutral dark surfaces, the logo cyan as the only accent,
+radii 8/6/4, sentence case, no violet or gradient accent). Components use the tokens, never colour literals. Icons are
+[Lucide](https://lucide.dev), type is Inter, with JetBrains Mono for code only.
 
 ```bash
 npm ci

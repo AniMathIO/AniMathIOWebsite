@@ -14,7 +14,7 @@ const label = (a: Aspect) => a.replace('x', ':')
 export const ShowcaseMedia = ({ video, aspect }: { video: Showcase; aspect: Aspect }) => {
   const file = showcaseFile(video.slug, aspect)
   return (
-    <div className="flex items-center justify-center bg-[#090b10] p-3">
+    <div className="flex items-center justify-center bg-stage p-3">
       {video.published ? (
         <video
           key={file}
@@ -42,15 +42,15 @@ export const ShowcaseMedia = ({ video, aspect }: { video: Showcase; aspect: Aspe
 
 /** Desktop shows 16:9 by default; the toggle offers 9:16 at every width, for phones in particular. */
 export const AspectToggle = ({ value, onChange }: { value: Aspect; onChange: (a: Aspect) => void }) => (
-  <div role="group" aria-label="Aspect ratio" className="inline-flex rounded-[8px] border border-line bg-raised p-0.5">
+  <div role="group" aria-label="Aspect ratio" className="inline-flex rounded-control border border-line bg-raised p-0.5">
     {ASPECTS.map((a) => (
       <button
         key={a}
         type="button"
         aria-pressed={value === a}
         onClick={() => onChange(a)}
-        className={`rounded-[6px] px-3 py-1 font-mono text-xs transition-colors ${
-          value === a ? 'bg-hover text-fg' : 'text-fg-2 hover:text-fg'
+        className={`rounded-control px-3 py-1 text-xs font-medium tabular-nums transition-colors ${
+          value === a ? 'bg-accent/16 text-fg' : 'text-fg-2 hover:text-fg'
         }`}
       >
         {label(a)}

@@ -102,7 +102,7 @@ const Examples: React.FC = () => (
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         {legacyVideos.map((v) => (
           <article key={v.url} className="panel overflow-hidden">
-            <video controls preload="metadata" muted className="aspect-video w-full bg-[#090b10]">
+            <video controls preload="metadata" muted className="aspect-video w-full bg-stage">
               <source src={v.url} type="video/webm" />
             </video>
             <div className="flex items-start justify-between gap-4 p-5">

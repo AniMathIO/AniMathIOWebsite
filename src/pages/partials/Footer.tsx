@@ -3,14 +3,14 @@ import { DISCORD, DOCS, DOCS_V1, DOCS_V2, RELEASES, REPO } from '../../data/site
 
 const col = 'flex flex-col gap-2 text-sm'
 const link = 'text-fg-2 transition-colors hover:text-fg'
-const head = 'mb-1 font-mono text-xs uppercase tracking-[0.14em] text-fg-3'
+const head = 'mb-1 text-sm font-semibold text-fg'
 
 const Footer: React.FC = () => (
   <footer className="mt-24 border-t border-line bg-panel">
     <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
       <div>
         <div className="flex items-center gap-3">
-          <img src="/img/logo.webp" width={32} height={32} alt="" className="rounded-[8px]" />
+          <img src="/img/logo.webp" width={32} height={32} alt="" className="rounded-card" />
           <span className="font-semibold">AniMathIO</span>
         </div>
         <p className="mt-3 max-w-xs text-sm text-fg-2">
