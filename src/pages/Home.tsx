@@ -29,20 +29,16 @@ import {
 
 const Hero = () => (
   <section className="relative overflow-hidden border-b border-line">
-    <div
-      aria-hidden="true"
-      className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(124,92,255,0.22),transparent_70%),radial-gradient(40%_40%_at_85%_10%,rgba(34,211,238,0.14),transparent_70%)]"
-    />
+    <div aria-hidden="true" className="graph-paper pointer-events-none absolute inset-x-0 top-0 h-[420px]" />
     <Container className="relative pt-16 pb-14 sm:pt-24">
       <div className="mx-auto max-w-3xl text-center">
-        <p className="inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3 py-1 font-mono text-xs text-fg-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-clip-audio" aria-hidden="true" />
+        <p className="inline-flex items-center rounded-full border border-line bg-panel px-3 py-1 text-xs font-medium tabular-nums text-fg-2">
           AniMathIO {VERSION}
         </p>
         <h1 className="mt-6 text-4xl font-semibold tracking-tight text-fg sm:text-6xl sm:leading-[1.05]">
           A native video editor
           <br />
-          <span className="text-gradient">for math animation.</span>
+          for math animation.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-fg-2">
           AniMathIO 2 is a from-scratch Rust rewrite: a small, fast timeline editor with LaTeX, graphs and shapes
@@ -51,14 +47,14 @@ const Hero = () => (
         <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
           <a
             href="#download"
-            className="btn-primary inline-flex min-h-12 items-center justify-center gap-2 rounded-[8px] px-6 text-base"
+            className="btn-primary inline-flex min-h-12 items-center justify-center gap-2 rounded-control px-6 text-base"
           >
             <DownloadIcon size={18} aria-hidden="true" />
             Download {VERSION}
           </a>
           <a
             href={DOCS_V2}
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[8px] border border-line bg-panel px-6 text-base font-medium text-fg transition-colors hover:bg-hover"
+            className="btn-secondary inline-flex min-h-12 items-center justify-center gap-2 rounded-control px-6 text-base"
           >
             <BookOpen size={18} aria-hidden="true" />
             Read the docs
@@ -68,15 +64,11 @@ const Hero = () => (
       </div>
 
       <div className="relative mx-auto mt-14 max-w-5xl">
-        <div
-          aria-hidden="true"
-          className="absolute -inset-4 -z-10 rounded-[24px] bg-gradient-to-br from-accent-from/25 to-accent-to/20 blur-2xl"
-        />
         <Shot
           src="/img/editor/editor-main.webp"
-          alt="The AniMathIO 2 editor: media library, program preview, inspector and a four-track timeline"
-          width={1400}
-          height={900}
+          alt="The AniMathIO 2 editor: media library, program preview, inspector and a multi-track timeline"
+          width={1920}
+          height={1080}
           priority
         />
       </div>
@@ -122,7 +114,7 @@ const MathObjects = () => (
             {mathObjects.map((name) => (
               <li
                 key={name}
-                className="rounded-full border border-line bg-raised px-3 py-1 font-mono text-xs text-fg-2"
+                className="rounded-full border border-line bg-raised px-3 py-1 text-xs font-medium text-fg-2"
               >
                 {name}
               </li>
@@ -131,9 +123,9 @@ const MathObjects = () => (
         </div>
         <Shot
           src="/img/editor/editor-math-panel.webp"
-          alt="A sine plot selected on the canvas, with the Math library open on the left and plot settings in the inspector"
+          alt="A sine plot selected on the canvas, with its plot settings in the flat inspector"
           width={1920}
-          height={1067}
+          height={1080}
         />
       </div>
     </Container>
@@ -155,7 +147,7 @@ const Automation = () => (
             <p className="mt-2 text-fg-2">{body}</p>
           </article>
         ))}
-        <article className="panel flex flex-col justify-between bg-gradient-to-br from-accent-from/10 to-accent-to/10 p-6">
+        <article className="panel flex flex-col justify-between p-6">
           <div>
             <IconBadge icon={Wand2} />
             <h3 className="mt-4 text-lg font-semibold text-fg">Same tools from the CLI and MCP</h3>
@@ -168,16 +160,16 @@ const Automation = () => (
       </div>
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         <Shot
-          src="/img/editor/subtitles.webp"
-          alt="Generated subtitles on a Subtitles track with the progress popover"
-          width={1400}
-          height={900}
+          src="/img/editor/editor-duck.webp"
+          alt="The Auto duck panel, with the music track shaded where it is lowered under the voice"
+          width={1920}
+          height={1080}
         />
         <Shot
           src="/img/editor/editor-autocut.webp"
           alt="The Automatic cuts panel listing detected silences with the time saved"
-          width={1400}
-          height={900}
+          width={1920}
+          height={1080}
         />
       </div>
     </Container>
@@ -233,7 +225,7 @@ const Control = () => (
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Script it, or hand it to an agent</h2>
           <p className="mt-4 text-lg text-fg-2">
             Every mutation is a serializable, invertible command, so the editor, the command line and MCP clients all
-            edit the project the same way, with undo included. Render frames, export MP4s and run the automation steps
+            edit the project the same way, with undo included. Render frames, export MP4 or WebM and run the automation steps
             headlessly.
           </p>
           <a
@@ -280,9 +272,9 @@ const Keymap = () => (
       <Shot
         className="mt-8"
         src="/img/editor/editor-timeline.webp"
-        alt="The timeline with tool buttons, track headers, filmstrip clips and snapping"
+        alt="The timeline with tool buttons, track headers, clips and markers"
         width={1920}
-        height={511}
+        height={300}
       />
     </Container>
   </section>
@@ -342,11 +334,11 @@ const Benchmarks = () => {
         {benchmarks.length === 0 ? (
           <div
             data-todo="benchmarks"
-            className="flex items-center gap-3 rounded-[10px] border border-dashed border-snap/60 bg-snap/5 p-6 text-fg-2"
+            className="flex items-center gap-3 rounded-panel border border-dashed border-warning/60 bg-warning/5 p-6 text-fg-2"
           >
-            <Gauge size={22} className="shrink-0 text-snap" aria-hidden="true" />
+            <Gauge size={22} className="shrink-0 text-warning" aria-hidden="true" />
             <p>
-              <span className="font-mono text-sm text-snap">TODO(benchmarks)</span>: numbers from{' '}
+              <span className="font-mono text-sm text-warning">TODO(benchmarks)</span>: numbers from{' '}
               <code className="font-mono text-sm">docs/benchmarks.md</code> go here. This block is development-only.
             </p>
           </div>
@@ -367,8 +359,8 @@ const Benchmarks = () => {
                       {b.metric}
                       {b.note && <span className="block text-xs text-fg-3">{b.note}</span>}
                     </td>
-                    <td className="px-5 py-3 font-mono">{b.v1}</td>
-                    <td className="px-5 py-3 font-mono text-fg">{b.v2}</td>
+                    <td className="px-5 py-3 tabular-nums">{b.v1}</td>
+                    <td className="px-5 py-3 font-medium tabular-nums text-fg">{b.v2}</td>
                   </tr>
                 ))}
               </tbody>

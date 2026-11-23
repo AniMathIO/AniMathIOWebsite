@@ -8,7 +8,7 @@ const NotFound: React.FC = () => (
     <p className="mt-4 text-lg text-fg-2">The link may be old, or the page may have moved.</p>
     <Link
       to="/"
-      className="btn-primary mt-8 inline-flex min-h-12 items-center justify-center rounded-[8px] px-6"
+      className="btn-primary mt-8 inline-flex min-h-12 items-center justify-center rounded-control px-6"
     >
       Back to the home page
     </Link>
