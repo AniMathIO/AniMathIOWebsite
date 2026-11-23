@@ -16,13 +16,6 @@ const filters = [
 type Filter = typeof filters[number][0]
 type Clip = typeof clips[number]
 
-const upcoming = [
-  { title: 'Molecule', summary: 'Molecular structures and chemical reactions.' },
-  { title: 'Physics', summary: 'Collisions, projectiles and domino simulations.' },
-  { title: 'Network', summary: 'Network topology and animated packet paths.' },
-  { title: 'Optics', summary: 'Light rays, reflection and refraction.' },
-]
-
 const ClipPlayer = ({ clip }: { clip: Clip }) => {
   const [playing, setPlaying] = useState(false)
   const poster = clip.poster.replace('img/', '/img/gallery/')
@@ -72,13 +65,20 @@ const GalleryCard = ({ clip }: { clip: Clip }) => (
     <div className="flex flex-1 flex-col border-t border-line p-4">
       <h3 className="text-base font-semibold">{clip.title}</h3>
       <p className="mt-1 text-sm text-fg-2">{clip.summary}</p>
-      <a
-        href={clip.docs}
-        aria-label={`Documentation for ${clip.plugin}`}
-        className="mt-auto block w-fit max-w-full pt-3 font-mono text-xs text-accent wrap-anywhere hover:underline"
-      >
-        {clip.plugin} <ArrowUpRight size={12} aria-hidden="true" className="inline" />
-      </a>
+      <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 font-mono text-xs text-accent">
+        <a
+          href={clip.docs}
+          aria-label={`Documentation for ${clip.plugin_name ?? clip.plugin}`}
+          className="max-w-full wrap-anywhere hover:underline"
+        >
+          {clip.plugin_name ?? clip.plugin} <ArrowUpRight size={12} aria-hidden="true" className="inline" />
+        </a>
+        {clip.release && (
+          <a href={clip.release} aria-label={`${clip.plugin_name} release`} className="hover:underline">
+            Release <ArrowUpRight size={12} aria-hidden="true" className="inline" />
+          </a>
+        )}
+      </div>
     </div>
   </article>
 )
@@ -132,15 +132,13 @@ export const FeatureGallery = () => {
         <section aria-labelledby="upcoming-plugins-heading" className="mt-8">
           <h3 id="upcoming-plugins-heading" className="text-lg font-semibold">Upcoming community plugins</h3>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {upcoming.map(({ title, summary }) => (
-              <article key={title} className="panel p-4">
-                <h4 className="flex items-center gap-2 font-medium">
-                  <Puzzle size={16} aria-hidden="true" className="text-fg-3" /> {title}
-                </h4>
-                <p className="mt-1 text-sm text-fg-2">{summary}</p>
-                <p className="mt-2 text-xs text-fg-3">Demo pending release</p>
-              </article>
-            ))}
+            <article className="panel p-4">
+              <h4 className="flex items-center gap-2 font-medium">
+                <Puzzle size={16} aria-hidden="true" className="text-fg-3" /> Physics
+              </h4>
+              <p className="mt-1 text-sm text-fg-2">Collisions, projectiles and domino simulations.</p>
+              <p className="mt-2 text-xs text-fg-3">Demo pending release</p>
+            </article>
           </div>
         </section>
       )}
