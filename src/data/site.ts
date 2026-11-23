@@ -20,7 +20,7 @@ import {
   Mic,
 } from 'lucide-react'
 
-export const VERSION = '2.3.0'
+export const VERSION = '2.3.1'
 export const REPO = 'https://github.com/AniMathIO/AniMathIO'
 export const RELEASES = `${REPO}/releases`
 export const DOCS = 'https://docs.animathio.com'
