@@ -702,6 +702,134 @@
     "poster": "img/code-snippets-morph.webp"
   },
   {
+    "slug": "molecule-caffeine",
+    "title": "Caffeine draws itself",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.molecule",
+    "docs": "https://github.com/AniMathIO/plugins/blob/io.github.animathio.molecule%400.1.0/community/molecule/README.md",
+    "summary": "Watch Molecule Studio draw caffeine’s fused rings and atom labels bond by bond.",
+    "plugin_name": "Molecule Studio",
+    "release": "https://github.com/AniMathIO/plugins/releases/tag/io.github.animathio.molecule%400.1.0",
+    "seconds": 5.0,
+    "mp4": "videos/molecule-caffeine.mp4",
+    "webm": "videos/molecule-caffeine.webm",
+    "poster": "img/molecule-caffeine.webp"
+  },
+  {
+    "slug": "molecule-esterification",
+    "title": "Esterification",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.molecule",
+    "docs": "https://github.com/AniMathIO/plugins/blob/io.github.animathio.molecule%400.1.0/community/molecule/README.md",
+    "summary": "Molecule Studio draws acetic acid and ethanol, then reveals ethyl acetate and water.",
+    "plugin_name": "Molecule Studio",
+    "release": "https://github.com/AniMathIO/plugins/releases/tag/io.github.animathio.molecule%400.1.0",
+    "seconds": 5.0,
+    "mp4": "videos/molecule-esterification.mp4",
+    "webm": "videos/molecule-esterification.webm",
+    "poster": "img/molecule-esterification.webp"
+  },
+  {
+    "slug": "optics-lens",
+    "title": "Converging lens",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.optics",
+    "docs": "https://github.com/AniMathIO/plugins/blob/io.github.animathio.optics%400.1.0/community/optics/README.md",
+    "summary": "Follow three rays through a converging lens to an inverted real image in Ray Optics.",
+    "plugin_name": "Ray Optics",
+    "release": "https://github.com/AniMathIO/plugins/releases/tag/io.github.animathio.optics%400.1.0",
+    "seconds": 5.0,
+    "mp4": "videos/optics-lens.mp4",
+    "webm": "videos/optics-lens.webm",
+    "poster": "img/optics-lens.webp"
+  },
+  {
+    "slug": "optics-tir",
+    "title": "Total internal reflection",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.optics",
+    "docs": "https://github.com/AniMathIO/plugins/blob/io.github.animathio.optics%400.1.0/community/optics/README.md",
+    "summary": "Ray Optics sweeps the incidence angle through the critical angle until only the reflected ray remains.",
+    "plugin_name": "Ray Optics",
+    "release": "https://github.com/AniMathIO/plugins/releases/tag/io.github.animathio.optics%400.1.0",
+    "seconds": 5.0,
+    "mp4": "videos/optics-tir.mp4",
+    "webm": "videos/optics-tir.webm",
+    "poster": "img/optics-tir.webp"
+  },
+  {
+    "slug": "network-arp",
+    "title": "ARP request and reply",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.network",
+    "docs": "https://github.com/AniMathIO/plugins/blob/io.github.animathio.network%401.0.0/community/network/README.md",
+    "summary": "Net Lab floods an ARP request across a switch, then uses the learned address to ping a peer.",
+    "plugin_name": "Net Lab",
+    "release": "https://github.com/AniMathIO/plugins/releases/tag/io.github.animathio.network%401.0.0",
+    "seconds": 6.0,
+    "mp4": "videos/network-arp.mp4",
+    "webm": "videos/network-arp.webm",
+    "poster": "img/network-arp.webp"
+  },
+  {
+    "slug": "network-dns",
+    "title": "Recursive DNS lookup",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.network",
+    "docs": "https://github.com/AniMathIO/plugins/blob/io.github.animathio.network%401.0.0/community/network/README.md",
+    "summary": "Net Lab follows a query for example.test from the client to its resolver and the authoritative server.",
+    "plugin_name": "Net Lab",
+    "release": "https://github.com/AniMathIO/plugins/releases/tag/io.github.animathio.network%401.0.0",
+    "seconds": 6.0,
+    "mp4": "videos/network-dns.mp4",
+    "webm": "videos/network-dns.webm",
+    "poster": "img/network-dns.webp"
+  },
+  {
+    "slug": "physics-projectile",
+    "title": "Projectile trajectories",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.physics",
+    "docs": "https://github.com/AniMathIO/plugins/blob/io.github.animathio.physics%400.1.0/community/physics/README.md",
+    "summary": "Compare launch angles and follow the velocity arrow along the highlighted trajectory.",
+    "plugin_name": "Physics Play",
+    "release": "https://github.com/AniMathIO/plugins/releases/tag/io.github.animathio.physics%400.1.0",
+    "seconds": 5.0,
+    "mp4": "videos/physics-projectile.mp4",
+    "webm": "videos/physics-projectile.webm",
+    "poster": "img/physics-projectile.webp"
+  },
+  {
+    "slug": "physics-dominoes",
+    "title": "Domino chain reaction",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.physics",
+    "docs": "https://github.com/AniMathIO/plugins/blob/io.github.animathio.physics%400.1.0/community/physics/README.md",
+    "summary": "A rolling ball tips the first domino, and each contact carries the motion down the row.",
+    "plugin_name": "Physics Play",
+    "release": "https://github.com/AniMathIO/plugins/releases/tag/io.github.animathio.physics%400.1.0",
+    "seconds": 5.0,
+    "mp4": "videos/physics-dominoes.mp4",
+    "webm": "videos/physics-dominoes.webm",
+    "poster": "img/physics-dominoes.webp"
+  },
+  {
     "slug": "webm-export",
     "title": "WebM export",
     "kinds": [
