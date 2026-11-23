@@ -31,8 +31,8 @@ Release metadata and the original showcase live in `src/data/site.ts`:
 
 [All features](https://animathio.com/examples#all-features) uses editable source
 projects from [the main repository](https://github.com/AniMathIO/AniMathIO/tree/main/examples/feature-gallery).
-Render the complete gallery with its release CLI and enabled Code Snippets
-bundle, then copy the outputs into this checkout:
+Render the complete gallery with its release CLI and all community bundles
+listed in the source gallery README enabled, then copy the outputs into this checkout:
 
 ```bash
 cp /path/to/feature-gallery/manifest.json src/data/feature-gallery.json
@@ -41,4 +41,3 @@ cp /path/to/feature-gallery/img/*.webp public/img/gallery/
 ```
 
 Each card loads its video on play. Keep the gallery media under 40 MB.
-Upcoming community plugins are listed in `src/components/FeatureGallery.tsx`.

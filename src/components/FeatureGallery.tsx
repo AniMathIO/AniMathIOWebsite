@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowUpRight, Play, Puzzle } from 'lucide-react'
+import { ArrowUpRight, Play } from 'lucide-react'
 import clips from '../data/feature-gallery.json'
 
 const filters = [
@@ -59,29 +59,33 @@ const ClipPlayer = ({ clip }: { clip: Clip }) => {
   )
 }
 
-const GalleryCard = ({ clip }: { clip: Clip }) => (
-  <article className="panel flex min-w-0 flex-col overflow-hidden">
-    <ClipPlayer clip={clip} />
-    <div className="flex flex-1 flex-col border-t border-line p-4">
-      <h3 className="text-base font-semibold">{clip.title}</h3>
-      <p className="mt-1 text-sm text-fg-2">{clip.summary}</p>
-      <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 font-mono text-xs text-accent">
-        <a
-          href={clip.docs}
-          aria-label={`Documentation for ${clip.plugin_name ?? clip.plugin}`}
-          className="max-w-full wrap-anywhere hover:underline"
-        >
-          {clip.plugin_name ?? clip.plugin} <ArrowUpRight size={12} aria-hidden="true" className="inline" />
-        </a>
-        {clip.release && (
-          <a href={clip.release} aria-label={`${clip.plugin_name} release`} className="hover:underline">
-            Release <ArrowUpRight size={12} aria-hidden="true" className="inline" />
+const GalleryCard = ({ clip }: { clip: Clip }) => {
+  const pluginName = clip.plugin_name ?? clip.plugin
+
+  return (
+    <article className="panel flex min-w-0 flex-col overflow-hidden">
+      <ClipPlayer clip={clip} />
+      <div className="flex flex-1 flex-col border-t border-line p-4">
+        <h3 className="text-base font-semibold">{clip.title}</h3>
+        <p className="mt-1 text-sm text-fg-2">{clip.summary}</p>
+        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 font-mono text-xs text-accent">
+          <a
+            href={clip.docs}
+            aria-label={`Documentation for ${pluginName}`}
+            className="max-w-full wrap-anywhere hover:underline"
+          >
+            {pluginName} <ArrowUpRight size={12} aria-hidden="true" className="inline" />
           </a>
-        )}
+          {clip.release && (
+            <a href={clip.release} aria-label={`${pluginName} release`} className="hover:underline">
+              Release <ArrowUpRight size={12} aria-hidden="true" className="inline" />
+            </a>
+          )}
+        </div>
       </div>
-    </div>
-  </article>
-)
+    </article>
+  )
+}
 
 export const FeatureGallery = () => {
   const section = useRef<HTMLElement>(null)
@@ -127,21 +131,6 @@ export const FeatureGallery = () => {
       <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((clip) => <GalleryCard key={clip.slug} clip={clip} />)}
       </div>
-
-      {(filter === 'all' || filter === 'community') && (
-        <section aria-labelledby="upcoming-plugins-heading" className="mt-8">
-          <h3 id="upcoming-plugins-heading" className="text-lg font-semibold">Upcoming community plugins</h3>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <article className="panel p-4">
-              <h4 className="flex items-center gap-2 font-medium">
-                <Puzzle size={16} aria-hidden="true" className="text-fg-3" /> Physics
-              </h4>
-              <p className="mt-1 text-sm text-fg-2">Collisions, projectiles and domino simulations.</p>
-              <p className="mt-2 text-xs text-fg-3">Demo pending release</p>
-            </article>
-          </div>
-        </section>
-      )}
     </section>
   )
 }
