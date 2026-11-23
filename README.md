@@ -15,7 +15,7 @@ npm run build
 
 ## Content that changes at a release
 
-All of it lives in `src/data/site.ts`:
+Release metadata and the original showcase live in `src/data/site.ts`:
 
 - `VERSION` and `downloads`: installer names are exactly what `.github/workflows/package.yml` produces
   (`animathio_<version>_x64-setup.exe`, `AniMathIO_<version>_aarch64.dmg`, `animathio_<version>_x86_64.AppImage`,
@@ -25,3 +25,20 @@ All of it lives in `src/data/site.ts`:
   Media is not committed until then.
 - `benchmarks`: `TODO(benchmarks)`. Fill from `docs/benchmarks.md` in the main repository. The Benchmarks
   section is hidden in production while the list is empty and shows a marked placeholder in `npm run dev`.
+
+
+## Feature gallery
+
+[All features](https://animathio.com/examples#all-features) uses editable source
+projects from [the main repository](https://github.com/AniMathIO/AniMathIO/tree/main/examples/feature-gallery).
+Render the complete gallery with its release CLI and enabled Code Snippets
+bundle, then copy the outputs into this checkout:
+
+```bash
+cp /path/to/feature-gallery/manifest.json src/data/feature-gallery.json
+cp /path/to/feature-gallery/videos/*.{mp4,webm} public/videos/gallery/
+cp /path/to/feature-gallery/img/*.webp public/img/gallery/
+```
+
+Each card loads its video on play. Keep the gallery media under 40 MB.
+Upcoming community plugins are listed in `src/components/FeatureGallery.tsx`.

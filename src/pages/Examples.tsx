@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Download, Film } from 'lucide-react'
+import { FeatureGallery } from '../components/FeatureGallery'
 import { Container, Eyebrow } from '../components/ui'
 import { AspectToggle, MusicCredit, ShowcaseMedia, type Aspect } from '../components/showcase'
 import { showcaseFile, showcaseVideos, type Showcase } from '../data/site'
@@ -84,6 +85,9 @@ const Examples: React.FC = () => (
         </a>
         .
       </p>
+      <a href="/examples#all-features" className="mt-5 inline-flex text-sm font-medium text-accent hover:underline">
+        Jump to all features
+      </a>
     </header>
 
     <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -91,6 +95,8 @@ const Examples: React.FC = () => (
         <ShowcaseCard key={v.slug} video={v} />
       ))}
     </div>
+
+    <FeatureGallery />
 
     <section className="mt-24">
       <Eyebrow>Made with 1.x</Eyebrow>
