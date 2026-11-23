@@ -611,7 +611,7 @@
     ],
     "plugin": "org.animathio.audio-basic / compressor",
     "docs": "https://docs.animathio.com/docs/plugins",
-    "summary": "Listen for the loud notes getting closer to the quiet ones. Blue is dry, green is with the effect.",
+    "summary": "Listen for more even notes at a similar overall level. Blue is dry, green is with the effect.",
     "seconds": 6.0,
     "mp4": "videos/audio-compressor.mp4",
     "webm": "videos/audio-compressor.webm",
