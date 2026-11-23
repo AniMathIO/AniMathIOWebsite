@@ -1,0 +1,732 @@
+[
+  {
+    "slug": "latex-inline-color",
+    "title": "LaTeX typesetting",
+    "kinds": [
+      "math"
+    ],
+    "plugin": "org.animathio.latex",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Write on Euler’s identity and the Gaussian integral. Inline colors highlight parts of the integral.",
+    "seconds": 5.0,
+    "mp4": "videos/latex-inline-color.mp4",
+    "webm": "videos/latex-inline-color.webm",
+    "poster": "img/latex-inline-color.webp"
+  },
+  {
+    "slug": "graph-tick-labels",
+    "title": "Function plots",
+    "kinds": [
+      "math"
+    ],
+    "plugin": "org.animathio.graph",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A plotted sine curve with grid, axes and numeric tick labels, drawn on over time.",
+    "seconds": 5.0,
+    "mp4": "videos/graph-tick-labels.mp4",
+    "webm": "videos/graph-tick-labels.webm",
+    "poster": "img/graph-tick-labels.webp"
+  },
+  {
+    "slug": "manim-import",
+    "title": "Manim scene import",
+    "kinds": [
+      "math"
+    ],
+    "plugin": "org.animathio.import-manim",
+    "docs": "https://docs.animathio.com/docs/cli",
+    "summary": "A Manim Community scene script converted to a project by the sandboxed importer plugin.",
+    "seconds": 5.0,
+    "mp4": "videos/manim-import.mp4",
+    "webm": "videos/manim-import.webm",
+    "poster": "img/manim-import.webp"
+  },
+  {
+    "slug": "shapes-stroke-fill",
+    "title": "Vector shapes",
+    "kinds": [
+      "math"
+    ],
+    "plugin": "org.animathio.shapes",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Filled paths, ellipses, strokes and keyframed rotation in normalized coordinates.",
+    "seconds": 4.0,
+    "mp4": "videos/shapes-stroke-fill.mp4",
+    "webm": "videos/shapes-stroke-fill.webm",
+    "poster": "img/shapes-stroke-fill.webp"
+  },
+  {
+    "slug": "text-styling",
+    "title": "Text styling",
+    "kinds": [
+      "text"
+    ],
+    "plugin": "org.animathio.text",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "DejaVu or bundled Inter with weights, plus the typewriter reveal parameter.",
+    "seconds": 5.0,
+    "mp4": "videos/text-styling.mp4",
+    "webm": "videos/text-styling.webm",
+    "poster": "img/text-styling.webp"
+  },
+  {
+    "slug": "captions",
+    "title": "Caption styles",
+    "kinds": [
+      "text"
+    ],
+    "plugin": "org.animathio.text",
+    "docs": "https://docs.animathio.com/docs/captions-and-automation",
+    "summary": "SRT import restyled per track: classic, word highlight and karaoke fill.",
+    "seconds": 6.0,
+    "mp4": "videos/captions.mp4",
+    "webm": "videos/captions.webm",
+    "poster": "img/captions.webp"
+  },
+  {
+    "slug": "captions-playful",
+    "title": "Caption styles II",
+    "kinds": [
+      "text"
+    ],
+    "plugin": "org.animathio.text",
+    "docs": "https://docs.animathio.com/docs/captions-and-automation",
+    "summary": "Pop, one-word-at-a-time and bold-outline caption styles on imported cues.",
+    "seconds": 6.0,
+    "mp4": "videos/captions-playful.mp4",
+    "webm": "videos/captions-playful.webm",
+    "poster": "img/captions-playful.webp"
+  },
+  {
+    "slug": "character-slide-in",
+    "title": "Character slide in",
+    "kinds": [
+      "text",
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / character-slide-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "The text plugin staggers individual glyphs as they slide in.",
+    "seconds": 3.8,
+    "mp4": "videos/character-slide-in.mp4",
+    "webm": "videos/character-slide-in.webm",
+    "poster": "img/character-slide-in.webp"
+  },
+  {
+    "slug": "character-slide-out",
+    "title": "Character slide out",
+    "kinds": [
+      "text",
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / character-slide-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "The text plugin staggers individual glyphs as they slide out.",
+    "seconds": 3.8,
+    "mp4": "videos/character-slide-out.mp4",
+    "webm": "videos/character-slide-out.webm",
+    "poster": "img/character-slide-out.webp"
+  },
+  {
+    "slug": "effect-grayscale",
+    "title": "Grayscale",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / grayscale",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Desaturate toward luminance.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-grayscale.mp4",
+    "webm": "videos/effect-grayscale.webm",
+    "poster": "img/effect-grayscale.webp"
+  },
+  {
+    "slug": "effect-sepia",
+    "title": "Sepia",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / sepia",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Add a warm monochrome tint.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-sepia.mp4",
+    "webm": "videos/effect-sepia.webm",
+    "poster": "img/effect-sepia.webp"
+  },
+  {
+    "slug": "effect-invert",
+    "title": "Invert",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / invert",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Invert the star’s colors.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-invert.mp4",
+    "webm": "videos/effect-invert.webm",
+    "poster": "img/effect-invert.webp"
+  },
+  {
+    "slug": "effect-saturate",
+    "title": "Saturate",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / saturate",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Boost color saturation.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-saturate.mp4",
+    "webm": "videos/effect-saturate.webm",
+    "poster": "img/effect-saturate.webp"
+  },
+  {
+    "slug": "effect-brightness",
+    "title": "Brightness",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / brightness",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Increase brightness in linear light.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-brightness.mp4",
+    "webm": "videos/effect-brightness.webm",
+    "poster": "img/effect-brightness.webp"
+  },
+  {
+    "slug": "effect-contrast",
+    "title": "Contrast",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / contrast",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Increase contrast around mid-gray.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-contrast.mp4",
+    "webm": "videos/effect-contrast.webm",
+    "poster": "img/effect-contrast.webp"
+  },
+  {
+    "slug": "effect-blur",
+    "title": "Blur",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / blur",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Soften the star with a box blur.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-blur.mp4",
+    "webm": "videos/effect-blur.webm",
+    "poster": "img/effect-blur.webp"
+  },
+  {
+    "slug": "effect-opacity",
+    "title": "Opacity",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / opacity",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Reduce the clip’s alpha.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-opacity.mp4",
+    "webm": "videos/effect-opacity.webm",
+    "poster": "img/effect-opacity.webp"
+  },
+  {
+    "slug": "effect-slide",
+    "title": "Clipped slide",
+    "kinds": [
+      "effects"
+    ],
+    "plugin": "org.animathio.effects-basic / slide",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Slide the star into its own bounds.",
+    "seconds": 3.5,
+    "mp4": "videos/effect-slide.mp4",
+    "webm": "videos/effect-slide.webm",
+    "poster": "img/effect-slide.webp"
+  },
+  {
+    "slug": "preset-fade-in",
+    "title": "Fade in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / fade-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with fade in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-fade-in.mp4",
+    "webm": "videos/preset-fade-in.webm",
+    "poster": "img/preset-fade-in.webp"
+  },
+  {
+    "slug": "preset-slide-in",
+    "title": "Slide in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / slide-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with slide in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-slide-in.mp4",
+    "webm": "videos/preset-slide-in.webm",
+    "poster": "img/preset-slide-in.webp"
+  },
+  {
+    "slug": "preset-zoom-in",
+    "title": "Zoom in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / zoom-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with zoom in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-zoom-in.mp4",
+    "webm": "videos/preset-zoom-in.webm",
+    "poster": "img/preset-zoom-in.webp"
+  },
+  {
+    "slug": "preset-pop-in",
+    "title": "Pop in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / pop-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with pop in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-pop-in.mp4",
+    "webm": "videos/preset-pop-in.webm",
+    "poster": "img/preset-pop-in.webp"
+  },
+  {
+    "slug": "preset-spin-in",
+    "title": "Spin in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / spin-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with spin in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-spin-in.mp4",
+    "webm": "videos/preset-spin-in.webm",
+    "poster": "img/preset-spin-in.webp"
+  },
+  {
+    "slug": "preset-bounce-in",
+    "title": "Bounce in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / bounce-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with bounce in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-bounce-in.mp4",
+    "webm": "videos/preset-bounce-in.webm",
+    "poster": "img/preset-bounce-in.webp"
+  },
+  {
+    "slug": "preset-wipe-in",
+    "title": "Wipe in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / wipe-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with wipe in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-wipe-in.mp4",
+    "webm": "videos/preset-wipe-in.webm",
+    "poster": "img/preset-wipe-in.webp"
+  },
+  {
+    "slug": "preset-typewriter-in",
+    "title": "Typewriter in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / typewriter-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with typewriter in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-typewriter-in.mp4",
+    "webm": "videos/preset-typewriter-in.webm",
+    "poster": "img/preset-typewriter-in.webp"
+  },
+  {
+    "slug": "preset-fade-out",
+    "title": "Fade out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / fade-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with fade out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-fade-out.mp4",
+    "webm": "videos/preset-fade-out.webm",
+    "poster": "img/preset-fade-out.webp"
+  },
+  {
+    "slug": "preset-slide-out",
+    "title": "Slide out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / slide-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with slide out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-slide-out.mp4",
+    "webm": "videos/preset-slide-out.webm",
+    "poster": "img/preset-slide-out.webp"
+  },
+  {
+    "slug": "preset-zoom-out",
+    "title": "Zoom out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / zoom-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with zoom out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-zoom-out.mp4",
+    "webm": "videos/preset-zoom-out.webm",
+    "poster": "img/preset-zoom-out.webp"
+  },
+  {
+    "slug": "preset-pop-out",
+    "title": "Pop out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / pop-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with pop out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-pop-out.mp4",
+    "webm": "videos/preset-pop-out.webm",
+    "poster": "img/preset-pop-out.webp"
+  },
+  {
+    "slug": "preset-spin-out",
+    "title": "Spin out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / spin-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with spin out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-spin-out.mp4",
+    "webm": "videos/preset-spin-out.webm",
+    "poster": "img/preset-spin-out.webp"
+  },
+  {
+    "slug": "preset-bounce-out",
+    "title": "Bounce out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / bounce-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with bounce out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-bounce-out.mp4",
+    "webm": "videos/preset-bounce-out.webm",
+    "poster": "img/preset-bounce-out.webp"
+  },
+  {
+    "slug": "preset-wipe-out",
+    "title": "Wipe out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / wipe-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with wipe out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-wipe-out.mp4",
+    "webm": "videos/preset-wipe-out.webm",
+    "poster": "img/preset-wipe-out.webp"
+  },
+  {
+    "slug": "preset-typewriter-out",
+    "title": "Typewriter out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / typewriter-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with typewriter out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-typewriter-out.mp4",
+    "webm": "videos/preset-typewriter-out.webm",
+    "poster": "img/preset-typewriter-out.webp"
+  },
+  {
+    "slug": "preset-breathe",
+    "title": "Breathe",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / breathe",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Apply the breathe emphasis preset to a title.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-breathe.mp4",
+    "webm": "videos/preset-breathe.webm",
+    "poster": "img/preset-breathe.webp"
+  },
+  {
+    "slug": "preset-shake",
+    "title": "Shake",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / shake",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Apply the shake emphasis preset to a title.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-shake.mp4",
+    "webm": "videos/preset-shake.webm",
+    "poster": "img/preset-shake.webp"
+  },
+  {
+    "slug": "preset-spin",
+    "title": "Spin",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / spin",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Apply the spin emphasis preset to a title.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-spin.mp4",
+    "webm": "videos/preset-spin.webm",
+    "poster": "img/preset-spin.webp"
+  },
+  {
+    "slug": "preset-hop",
+    "title": "Hop",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / hop",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Apply the hop emphasis preset to a title.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-hop.mp4",
+    "webm": "videos/preset-hop.webm",
+    "poster": "img/preset-hop.webp"
+  },
+  {
+    "slug": "preset-flash",
+    "title": "Flash",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / flash",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Apply the flash emphasis preset to a title.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-flash.mp4",
+    "webm": "videos/preset-flash.webm",
+    "poster": "img/preset-flash.webp"
+  },
+  {
+    "slug": "preset-clipped-slide-in",
+    "title": "Clipped slide in",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / clipped-slide-in",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates in with clipped slide in.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-clipped-slide-in.mp4",
+    "webm": "videos/preset-clipped-slide-in.webm",
+    "poster": "img/preset-clipped-slide-in.webp"
+  },
+  {
+    "slug": "preset-clipped-slide-out",
+    "title": "Clipped slide out",
+    "kinds": [
+      "animations"
+    ],
+    "plugin": "org.animathio.animations / clipped-slide-out",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "A title animates out with clipped slide out.",
+    "seconds": 3.4,
+    "mp4": "videos/preset-clipped-slide-out.mp4",
+    "webm": "videos/preset-clipped-slide-out.webm",
+    "poster": "img/preset-clipped-slide-out.webp"
+  },
+  {
+    "slug": "audio-gain",
+    "title": "Gain / trim",
+    "kinds": [
+      "audio"
+    ],
+    "plugin": "org.animathio.audio-basic / gain",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Raise the level by 6 dB. Hear the same fixture dry, then processed.",
+    "seconds": 6.0,
+    "mp4": "videos/audio-gain.mp4",
+    "webm": "videos/audio-gain.webm",
+    "poster": "img/audio-gain.webp"
+  },
+  {
+    "slug": "audio-eq3",
+    "title": "3-band EQ",
+    "kinds": [
+      "audio"
+    ],
+    "plugin": "org.animathio.audio-basic / eq3",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Reduce the low shelf and boost the midrange. Hear the same fixture dry, then processed.",
+    "seconds": 6.0,
+    "mp4": "videos/audio-eq3.mp4",
+    "webm": "videos/audio-eq3.webm",
+    "poster": "img/audio-eq3.webp"
+  },
+  {
+    "slug": "audio-compressor",
+    "title": "Compressor",
+    "kinds": [
+      "audio"
+    ],
+    "plugin": "org.animathio.audio-basic / compressor",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Tame peaks with a lower threshold and 8:1 ratio. Hear the same fixture dry, then processed.",
+    "seconds": 6.0,
+    "mp4": "videos/audio-compressor.mp4",
+    "webm": "videos/audio-compressor.webm",
+    "poster": "img/audio-compressor.webp"
+  },
+  {
+    "slug": "audio-gate",
+    "title": "Noise gate",
+    "kinds": [
+      "audio"
+    ],
+    "plugin": "org.animathio.audio-basic / gate",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Attenuate quiet intervals below the threshold. Hear the same fixture dry, then processed.",
+    "seconds": 6.0,
+    "mp4": "videos/audio-gate.mp4",
+    "webm": "videos/audio-gate.webm",
+    "poster": "img/audio-gate.webp"
+  },
+  {
+    "slug": "audio-highpass",
+    "title": "High-pass filter",
+    "kinds": [
+      "audio"
+    ],
+    "plugin": "org.animathio.audio-basic / highpass",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Reduce the low-frequency rumble. Hear the same fixture dry, then processed.",
+    "seconds": 6.0,
+    "mp4": "videos/audio-highpass.mp4",
+    "webm": "videos/audio-highpass.webm",
+    "poster": "img/audio-highpass.webp"
+  },
+  {
+    "slug": "audio-voice-cleanup",
+    "title": "Voice cleanup",
+    "kinds": [
+      "audio"
+    ],
+    "plugin": "org.animathio.audio-basic / voice_cleanup",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Apply high-pass filtering, gating and de-essing. Hear the same fixture dry, then processed.",
+    "seconds": 6.0,
+    "mp4": "videos/audio-voice-cleanup.mp4",
+    "webm": "videos/audio-voice-cleanup.webm",
+    "poster": "img/audio-voice-cleanup.webp"
+  },
+  {
+    "slug": "audio-denoise",
+    "title": "Denoise",
+    "kinds": [
+      "audio"
+    ],
+    "plugin": "org.animathio.audio-basic / denoise",
+    "docs": "https://docs.animathio.com/docs/plugins",
+    "summary": "Reduce the fixture’s steady noise floor. Hear the same fixture dry, then processed.",
+    "seconds": 6.0,
+    "mp4": "videos/audio-denoise.mp4",
+    "webm": "videos/audio-denoise.webm",
+    "poster": "img/audio-denoise.webp"
+  },
+  {
+    "slug": "code-snippets-reveal",
+    "title": "Code reveal",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.code-snippets",
+    "docs": "https://github.com/AniMathIO/plugins/tree/io.github.animathio.code-snippets%400.1.0/community/code-snippets",
+    "summary": "Reveal syntax-highlighted Python one character at a time.",
+    "seconds": 5.0,
+    "mp4": "videos/code-snippets-reveal.mp4",
+    "webm": "videos/code-snippets-reveal.webm",
+    "poster": "img/code-snippets-reveal.webp"
+  },
+  {
+    "slug": "code-snippets-morph",
+    "title": "Code morph",
+    "kinds": [
+      "community"
+    ],
+    "plugin": "io.github.animathio.code-snippets",
+    "docs": "https://github.com/AniMathIO/plugins/tree/io.github.animathio.code-snippets%400.1.0/community/code-snippets",
+    "summary": "Move retained tokens between two Python snippets.",
+    "seconds": 5.0,
+    "mp4": "videos/code-snippets-morph.mp4",
+    "webm": "videos/code-snippets-morph.webm",
+    "poster": "img/code-snippets-morph.webp"
+  },
+  {
+    "slug": "webm-export",
+    "title": "WebM export",
+    "kinds": [
+      "editing"
+    ],
+    "plugin": "animathio-cli export",
+    "docs": "https://docs.animathio.com/docs/cli",
+    "summary": "Every gallery card renders twice from one project: H.264 MP4 and VP9 + Opus WebM. This clip plays the WebM version in supported browsers.",
+    "seconds": 4.0,
+    "mp4": "videos/webm-export.mp4",
+    "webm": "videos/webm-export.webm",
+    "poster": "img/webm-export.webp"
+  },
+  {
+    "slug": "mp4-chapters",
+    "title": "MP4 chapters",
+    "kinds": [
+      "editing"
+    ],
+    "plugin": "animathio-cli export",
+    "docs": "https://docs.animathio.com/docs/cli",
+    "summary": "Timeline markers export as a chapter list and embed as the MP4 chapter atom.",
+    "seconds": 6.0,
+    "mp4": "videos/mp4-chapters.mp4",
+    "webm": "videos/mp4-chapters.webm",
+    "poster": "img/mp4-chapters.webp"
+  }
+]
