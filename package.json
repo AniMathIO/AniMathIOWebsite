@@ -20,7 +20,7 @@
     "lucide-react": "^1.73.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.3.0",
+    "react-router-dom": "^7.18.0",
     "tailwindcss": "^4.0.12"
   },
   "devDependencies": {
@@ -36,6 +36,6 @@
     "globals": "^17.14.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.72.1",
-    "vite": "^6.2.1"
+    "vite": "^6.4.4"
   }
 }
